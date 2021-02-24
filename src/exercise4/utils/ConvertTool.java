@@ -3,7 +3,7 @@ package exercise4.utils;
 import exercise4.pack1.*;
 
 public class ConvertTool {
-    private static float minGrade = 2f;
+    private static final float minGrade = 2f;
 
     public static float NormalToFour(float d) {
         float diem = d;
