@@ -7,7 +7,7 @@ public class ConvertTool {
 
     public static float NormalToFour(float d) {
         float diem = d;
-        if (0 <= d && d <= 10)
+        if (8.5 <= d && d <= 10)
             diem = 4f;
         else if (8 <= d && d <= 8.4)
             diem = 3.5f;
@@ -21,36 +21,36 @@ public class ConvertTool {
             diem = 1.5f;
         else if (4 <= d && d <= 4.9)
             diem = 1f;
-        else if (0 <= d && d <= 4)
+        else if (0 <= d && d <= 3.9)
             diem = 0;
         return diem;
     }
 
     public static String FourToABCDF(float d) {
-        String diem = d + "";
+        String diem = NormalToFour(d) + "";
         switch (diem) {
-            case "4":
+            case "4.0":
                 diem = "A";
                 break;
             case "3.5":
                 diem = "B+";
                 break;
-            case "3":
+            case "3.0":
                 diem = "B";
                 break;
             case "2.5":
                 diem = "C+";
                 break;
-            case "2":
+            case "2.0":
                 diem = "C";
                 break;
             case "1.5":
                 diem = "D+";
                 break;
-            case "1":
+            case "1.0":
                 diem = "D";
                 break;
-            case "0":
+            case "0.0":
                 diem = "F";
                 break;
         }

@@ -19,6 +19,11 @@ public class MainClass {
             subs[i] = new Subject(tinchi, diem);
         }
         System.out.println();
+        for (int i = 0; i < subs.length; ++i) {
+            System.out.println("Mon hoc thu " + (i + 1) + ":");
+            System.out.println(ConvertTool.NormalToFour(subs[i].getDiem()));
+            System.out.println(ConvertTool.FourToABCDF(subs[i].getDiem()));
+        }
         boolean c = ConvertTool.Grade(subs);
         if (c == true)
             System.out.println("Du dieu kien ra truong");
